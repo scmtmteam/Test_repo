@@ -1,0 +1,26 @@
+
+<project name="Test" default="copy" basedir="C:\Users\gm00432052\git_workspace\bamboo_ws">
+
+<property name="src" location="${basedir}/src"/>
+<property name="dist" location="${basedir}/output"/>
+
+<tstamp>
+      <format property="touch.time" pattern="MM/dd/yyyy hh:mm aa"
+              offset="-5" unit="hour"/>
+  </tstamp>
+  
+<target name="clean">
+   <echo> cleaning target path</echo>
+	<delete dir="${dist}"/>
+</target>
+
+<target name="init" depends="clean">
+<mkdir dir="${dist}"/>
+</target>
+
+<target name="copy" depends="init">
+<copy file="${src}/myfile.txt" todir="${dist}"/>
+</target>
+
+</project>
+
