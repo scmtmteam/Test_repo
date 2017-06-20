@@ -19,7 +19,11 @@
 </target>
 
 <target name="copy" depends="init">
-<copy file="${src}/myfile.txt" todir="${dist}"/>
+<copy todir="${dist}">
+    <fileset dir="${src}">
+      <include name="**/*.txt"/>
+    </fileset>
+  </copy>
 </target>
 
 </project>
