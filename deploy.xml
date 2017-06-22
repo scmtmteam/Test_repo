@@ -1,0 +1,15 @@
+<project name="mmsc-jar" default="deploy">
+
+<property name="src" location="C:\Users\techmadmin\bamboo-home\xml-data\build-dir\MMSCTM-ANT1-JOB1\jar"/>
+<property name="dest" location="C:\Program Files\Bamboo\webapps"/>
+<property name="jar-file" value="MMSC_TM_01"/>
+
+<target name="clean">
+<delete file="${dest}/${jar-file}.jar"/>
+</target>
+
+<target name="deploy" depends="clean">
+<copy file="${src}/${jar-file}.jar" todir="${dest}"/>
+</target>
+
+</project>
