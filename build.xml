@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<project name="Openstact_ANT_Script" default="jar" basedir=".">
+
+    <property file="C:\Users\gm00432052\git_workspace\Test_repo\build.properties"/>
+
+    <property name="src" location="C:\Users\gm00432052\git_workspace\Test_repo\src"/>
+    <property name="dest" location="${basedir}\output"/>
+    <property name="class" location="${basedir}\class"/>
+    <property name="jar" location="${basedir}\jar"/>
+    <property name="jar_classes" location="C:\Users\gm00432052\git_workspace\jar_depends"/>
+      
+        
+<target name="clean">
+    <echo> cleaning target path</echo>
+	<delete dir="${dest}"/>
+    <delete dir="${class}"/>
+    <delete dir="${jar}"/>
+</target>
+
+<target name="init" depends="clean">
+    <mkdir dir="${dest}"/>
+    <mkdir dir="${class}"/>
+    <mkdir dir="${jar}"/>
+</target>
+
+
+<target name="compile" depends="init">
+	<javac srcdir="${src}" destdir="${class}" />
+</target>
+
+
+<target name="jar" depends="compile">
+ <echo> Jar file creation for ${proj.name}....</echo>
+	<jar destfile="${jar}/MMSC_TM_01.jar"
+        basedir = "${class}" />
+        <!--includes="${jar_classes}/**"/>  -->
+    
+</target>
+
+
+ 
+</project>
+

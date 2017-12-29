@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.4
+Created-By: 1.8.0_131-b11 (Oracle Corporation)
+Built-By: GM00432052
+
+Name: common
+Specification-Title: Example
+Specification-Version: 3.3.2
+Specification-Vendor: Example Organization
+Implementation-Title: common
+Implementation-Version: 5.2.1.0 ${TODAY}
+Implementation-Vendor: Example Corp.
+
+Name: common/class1.class
+Sealed: false
+
